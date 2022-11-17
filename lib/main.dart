@@ -1,5 +1,6 @@
 import 'package:al_1/ui/home_screen/home_screen.dart';
 import 'package:al_1/ui/settings/settings_screen.dart';
+import 'package:al_1/ui/stateful_exercises/three/three.dart';
 import 'package:al_1/ui/stateful_exercises/two/two.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const Two(),
+      home: const Three(),
     );
   }
 }

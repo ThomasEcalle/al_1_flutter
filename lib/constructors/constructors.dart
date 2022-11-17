@@ -7,6 +7,7 @@ class User {
 }
 
 main() {
+  final toto = 42;
   const a = User(firstName: 'Toto');
   const b = User(firstName: 'Toto');
 

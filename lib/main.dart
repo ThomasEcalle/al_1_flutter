@@ -1,5 +1,6 @@
 import 'package:al_1/ui/home_screen/home_screen.dart';
 import 'package:al_1/ui/layouts/layouts.dart';
+import 'package:al_1/ui/lists/lists.dart';
 import 'package:al_1/ui/settings/settings_screen.dart';
 import 'package:al_1/ui/stateful_exercises/three/three.dart';
 import 'package:al_1/ui/stateful_exercises/two/two.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const Layouts(),
+      home: const Lists(),
     );
   }
 }

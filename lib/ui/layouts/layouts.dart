@@ -5,14 +5,60 @@ class Layouts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: const [
-        RedSquare(),
-        RedSquare(),
-        RedSquare(),
-        RedSquare(),
-      ],
+    final screenHeight = MediaQuery.of(context).size.height;
+
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Container(
+            height: screenHeight * .5,
+            width: double.infinity,
+            color: Colors.blue,
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final maxHeight = constraints.maxHeight;
+                return Column(
+                  children: [
+                    Container(
+                      height: maxHeight * .5,
+                      width: double.infinity,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      height: maxHeight * .5,
+                      width: double.infinity,
+                      color: Colors.pink,
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+          Container(
+            height: screenHeight * .5,
+            width: double.infinity,
+            color: Colors.orangeAccent,
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: double.infinity,
+                    color: Colors.green,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: double.infinity,
+                    color: Colors.yellow,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,11 +1,7 @@
 import 'package:al_1/ui/home_screen/home_screen.dart';
-import 'package:al_1/ui/layouts/layouts.dart';
-import 'package:al_1/ui/lists/lists.dart';
 import 'package:al_1/ui/settings/settings_screen.dart';
-import 'package:al_1/ui/stateful_exercises/three/three.dart';
-import 'package:al_1/ui/stateful_exercises/two/two.dart';
+import 'package:al_1/ui/webservices/webservices_screen_with_futurebuilder.dart';
 import 'package:flutter/material.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +22,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const Lists(),
+      home: const WebservicesScreenWithFutureBuilder(),
     );
   }
 }
